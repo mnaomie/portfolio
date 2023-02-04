@@ -29,9 +29,8 @@
     align-items: $align;
 }
 
-@mixin border() {
-    width: 32%;
+@mixin border($color: white) {
     border: $border;
-    padding: 10px;
     text-align: center;
+    color: $color;
 }
