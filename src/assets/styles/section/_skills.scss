@@ -4,6 +4,7 @@
     background-color: $text-color;
 
     .skills-page {
+        @include flex($direction: column);
         .skill {
             width: 100%;
             height: 9vh;
@@ -12,46 +13,287 @@
                 justify-content: center;
                 align-items: center;
                 padding-top: 60px;
+
+                h2 {
+                    text-align: center;
+                    font-weight: lighter;
+                    border: $border $primary-dark-color;
+                    width: 30%;
+                    
+                }
+            }
+        }
+
+        .skill-competence {
+            width: 100%;
+            height: 100vh;
+            padding-top: 5rem;
+    
+    
+            &-top{
+                @include flex($align: flex-start);
+                width: 100%;
+                height: 50vh;
+        
+                &-left {
+                    width: 50%;
+                    height: 50vh;
+    
+                    h3 {
+                        font-weight: lighter;
+                        color: $primary-dark-color;
+                        margin-left: 10%;
+                        border-bottom: 3px solid $secondary-color;
+                        width: 70%;
+                    }
+    
+                    .competence-web {
+                        margin: 2rem 0 0 8rem;
+                        
+    
+                        .front-end {
+
+                            margin-bottom: 1.5rem;
+    
+                            h4 {
+                                margin-left: -5%;
+                                font-weight: lighter;
+                            }
+                            
+                            .list {
+                                display: flex;
+                                margin-top: 0.5rem;
+                                
+    
+                                p {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 15px;
+                                    margin-right: 2rem;
+                                    background-color: $primary-dark-color;
+                                    color: $text-color;
+                                    width: 5rem;
+                                    height: 3rem;
+                                    text-align: center;
+                                    border-radius: 30px;
+                                    
+                                }
+                                
+                            }
+                        }
+    
+                        .back-end{
+
+                            margin-bottom: 1.5rem;
+    
+                            h4 {
+                                margin-left: -5%;
+                                font-weight: lighter;
+                            }
+                            
+                            .list {
+                                display: flex;
+                                margin-top: 0.5rem;
+                                
+    
+                                p {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 15px;
+                                    margin-right: 2rem;
+                                    background-color: $primary-dark-color;
+                                    color: $text-color;
+                                    width: 5rem;
+                                    height: 3rem;
+                                    text-align: center;
+                                    border-radius: 30px;
+                                }
+                                
+                            }
+                        }
+
+                        .framework {
+
+                            margin-bottom: 1.5rem;
+    
+                            h4 {
+                                margin-left: -5%;
+                                font-weight: lighter;
+                            }
+                            
+                            .list {
+                                display: flex;
+                                margin-top: 0.5rem;
+                                
+    
+                                p {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 15px;
+                                    margin-right: 2rem;
+                                    background-color: $primary-dark-color;
+                                    color: $text-color;
+                                    width: 5rem;
+                                    height: 3rem;
+                                    text-align: center;
+                                    border-radius: 30px;
+                                }
+                                
+                            }
+                        }
+                    }
+
+                    
+                }
+        
+                &-right {
+                    width: 50%;
+    
+                    
+    
+                    h3 {
+                        font-weight: lighter;
+                        color: $primary-dark-color;
+                        margin-left: 10%;
+                        border-bottom: 3px solid $secondary-color;
+                        width: 70%;
+                    }
+
+                    .competence-art {
+                        margin: 2rem 0 0 8rem;
+                        
+    
+                        .design {
+
+                            margin-bottom: 1.5rem;
+    
+                            h4 {
+                                margin-left: -5%;
+                                font-weight: lighter;
+                            }
+                            
+                            .list {
+                                display: flex;
+                                margin-top: 0.5rem;
+                                
+    
+                                p {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 15px;
+                                    margin-right: 2rem;
+                                    background-color: $primary-dark-color;
+                                    color: $text-color;
+                                    width: 5rem;
+                                    height: 3rem;
+                                    text-align: center;
+                                    border-radius: 30px;
+                                    
+                                }
+                                
+                            }
+                        }
+    
+                        .art{
+
+                            margin-bottom: 1.5rem;
+    
+                            h4 {
+                                margin-left: -5%;
+                                font-weight: lighter;
+                            }
+                            
+                            .list {
+                                display: flex;
+                                margin-top: 0.5rem;
+                                
+    
+                                p {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 15px;
+                                    margin-right: 2rem;
+                                    background-color: $primary-dark-color;
+                                    color: $text-color;
+                                    width: 5rem;
+                                    height: 3rem;
+                                    text-align: center;
+                                    border-radius: 30px;
+                                }
+                                
+                            }
+                        }
+
+                        
+                    }
+                    
+                }
+    
+                
+                
+            }
+        
+            &-bottom {
+                @include flex($align: flex-start);
+                width: 100%;
+                height: 40vh;
+                
+                &-left {
+                    width: 50%;
+    
+                    h3 {
+                        font-weight: lighter;
+                        color: $primary-dark-color;
+                        margin-left: 10%;
+                        border-bottom: 3px solid $secondary-color;
+                        width: 70%; 
+                    }
+
+                    .soft-skills {
+                        margin: 2rem 0 0 8rem;
+
+                        li {
+                            margin: 10px;
+                            font-weight: lighter;
+                            font-size: 0.85rem;
+                        }
+                    }
+
+                    
+                }
+        
+                &-right {
+                    width: 50%;
+    
+                    h3 {
+                        font-weight: lighter;
+                        color: $primary-dark-color;
+                        margin-left: 10%;
+                        border-bottom: 3px solid $secondary-color;
+                        width: 70%;
+                    }
+
+                    .languages {
+                        margin: 2rem 0 0 8rem;
+
+                        li {
+                            margin: 10px;
+                            font-weight: lighter;
+                            font-size: 0.85rem;
+                        }
+                    }
+                }
+        
             }
         }
     }
 
-    .skill-competence {
-        width: 100%;
-        height: 100vh;
-        padding-top: 5rem;
-
-
-        &-top{
-            @include flex($align: flex-start);
-            width: 100%;
-            height: 50vh;
     
-            &-left {
-                width: 50%;
-            }
-    
-            &-right {
-                width: 50%
-            }
-            
-        }
-    
-        &-bottom {
-            @include flex($align: flex-start);
-            width: 100%;
-            height: 40vh;
-            
-            &-left {
-                width: 50%;
-            }
-    
-            &-right {
-                width: 50%;
-            }
-    
-        }
-    }
 
     
 }
