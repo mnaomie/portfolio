@@ -1,6 +1,12 @@
 .skills {
     width: 100%;
     height: 100vh;
+    @include sm {
+        height: 170vh;
+    }
+    @include md {
+        height: 170vh;
+    }
     background-color: $text-color;
 
     .skills-page {
@@ -13,12 +19,26 @@
                 justify-content: center;
                 align-items: center;
                 padding-top: 60px;
+                @include sm {
+                    margin-top: -5rem;
+                }
+                @include md {
+                    margin-top: -5rem;
+                }
 
                 h2 {
                     text-align: center;
                     font-weight: lighter;
                     border: $border $primary-dark-color;
                     width: 30%;
+                    @include sm {
+                        font-size: 1rem;
+                        margin-bottom: -12rem;
+                    }
+                    @include md {
+                        font-size: 1rem;
+                        margin-bottom: -12rem;
+                    }
                     
                 }
             }
@@ -28,16 +48,37 @@
             width: 100%;
             height: 100vh;
             padding-top: 5rem;
+            transform: translateX(-100%);
+
+            &.active {
+                transform: translateX(0%);
+                transition: 1.5s;
+            }
     
     
             &-top{
                 @include flex($align: flex-start);
                 width: 100%;
                 height: 50vh;
+                @include sm {
+                    flex-direction: column;
+                    margin-top: 5rem;
+                }
+                @include md {
+                    flex-direction: column;
+                    margin-top: 5rem;
+                }
         
                 &-left {
                     width: 50%;
                     height: 50vh;
+                    @include sm {
+                        height: 30vh;
+                    }
+                    @include md {
+                        height: 30vh;
+                    }
+                    
     
                     h3 {
                         font-weight: lighter;
@@ -45,19 +86,52 @@
                         margin-left: 10%;
                         border-bottom: 3px solid $secondary-color;
                         width: 70%;
+                        @include sm {
+                            font-size: 0.9rem;
+                            margin-bottom: 1rem;
+                        }
+                        @include md {
+                            font-size: 0.9rem;
+                            margin-bottom: 1rem;
+                        }
                     }
     
                     .competence-web {
                         margin: 2rem 0 0 8rem;
+
+                        @include sm {
+                            margin: 0;
+                            margin-left: 2rem;
+
+                        }
+                        @include md {
+                            margin: 0;
+                            margin-left: 2rem;
+                        }
                         
     
                         .front-end {
 
                             margin-bottom: 1.5rem;
+                            @include sm {
+                                margin-bottom: 1rem;
+    
+                            }
+                            @include md {
+                                margin-bottom: 1rem;
+                            }
     
                             h4 {
                                 margin-left: -5%;
                                 font-weight: lighter;
+                                @include sm {
+                                    font-size: 0.8rem;
+        
+                                }
+                                @include md {
+                                    font-size: 0.8rem;
+                                }
+                                
                             }
                             
                             .list {
@@ -77,6 +151,20 @@
                                     height: 3rem;
                                     text-align: center;
                                     border-radius: 30px;
+                                    @include sm {
+                                        margin-right: 1rem;
+                                        font-size: 0.5rem;
+                                        width: 5rem;
+                                        height: 2rem;
+                                        padding: 0.4rem;
+                                    }
+                                    @include md {
+                                        margin-right: 1rem;
+                                        font-size: 0.5rem;
+                                        width: 5rem;
+                                        height: 2rem;
+                                        padding: 0.4rem;
+                                    }
                                     
                                 }
                                 
@@ -86,10 +174,26 @@
                         .back-end{
 
                             margin-bottom: 1.5rem;
+                            @include sm {
+                                margin-bottom: 1rem;
+    
+                            }
+                            @include md {
+                                margin-bottom: 1rem;
+                            }
+                            
+                            
     
                             h4 {
                                 margin-left: -5%;
                                 font-weight: lighter;
+                                @include sm {
+                                    font-size: 0.8rem;
+        
+                                }
+                                @include md {
+                                    font-size: 0.8rem;
+                                }
                             }
                             
                             .list {
@@ -109,6 +213,20 @@
                                     height: 3rem;
                                     text-align: center;
                                     border-radius: 30px;
+                                    @include sm {
+                                        margin-right: 1rem;
+                                        font-size: 0.5rem;
+                                        width: 5rem;
+                                        height: 2rem;
+                                        padding: 0.4rem;
+                                    }
+                                    @include md {
+                                        margin-right: 1rem;
+                                        font-size: 0.5rem;
+                                        width: 5rem;
+                                        height: 2rem;
+                                        padding: 0.4rem;
+                                    }
                                 }
                                 
                             }
@@ -117,10 +235,24 @@
                         .framework {
 
                             margin-bottom: 1.5rem;
+                            @include sm {
+                                margin-bottom: 2rem;
+    
+                            }
+                            @include md {
+                                margin-bottom: 2rem;
+                            }
     
                             h4 {
                                 margin-left: -5%;
                                 font-weight: lighter;
+                                @include sm {
+                                    font-size: 0.8rem;
+        
+                                }
+                                @include md {
+                                    font-size: 0.8rem;
+                                }
                             }
                             
                             .list {
@@ -140,6 +272,20 @@
                                     height: 3rem;
                                     text-align: center;
                                     border-radius: 30px;
+                                    @include sm {
+                                        margin-right: 1rem;
+                                        font-size: 0.5rem;
+                                        width: 5rem;
+                                        height: 2rem;
+                                        padding: 0.4rem;
+                                    }
+                                    @include md {
+                                        margin-right: 1rem;
+                                        font-size: 0.5rem;
+                                        width: 5rem;
+                                        height: 2rem;
+                                        padding: 0.4rem;
+                                    }
                                 }
                                 
                             }
@@ -151,6 +297,13 @@
         
                 &-right {
                     width: 50%;
+                    @include sm {
+                        margin-top: 5rem;
+
+                    }
+                    @include md {
+                        margin-top: 5rem;
+                    }
     
                     
     
@@ -160,19 +313,50 @@
                         margin-left: 10%;
                         border-bottom: 3px solid $secondary-color;
                         width: 70%;
+                        @include sm {
+                            font-size: 0.9rem;
+                            margin-bottom: 1rem;
+                        }
+                        @include md {
+                            font-size: 0.9rem;
+                            margin-bottom: 1rem;
+                        }
                     }
 
                     .competence-art {
                         margin: 2rem 0 0 8rem;
+                        @include sm {
+                            margin: 0;
+                            margin-left: 2rem;
+
+                        }
+                        @include md {
+                            margin: 0;
+                            margin-left: 2rem;
+                        }
                         
     
                         .design {
 
                             margin-bottom: 1.5rem;
+                            @include sm {
+                                margin-bottom: 1rem;
+    
+                            }
+                            @include md {
+                                margin-bottom: 1rem;
+                            }
     
                             h4 {
                                 margin-left: -5%;
                                 font-weight: lighter;
+                                @include sm {
+                                    font-size: 0.8rem;
+        
+                                }
+                                @include md {
+                                    font-size: 0.8rem;
+                                }
                             }
                             
                             .list {
@@ -192,6 +376,20 @@
                                     height: 3rem;
                                     text-align: center;
                                     border-radius: 30px;
+                                    @include sm {
+                                        margin-right: 1rem;
+                                        font-size: 0.5rem;
+                                        width: 5rem;
+                                        height: 2rem;
+                                        padding: 0.4rem;
+                                    }
+                                    @include md {
+                                        margin-right: 1rem;
+                                        font-size: 0.5rem;
+                                        width: 5rem;
+                                        height: 2rem;
+                                        padding: 0.4rem;
+                                    }
                                     
                                 }
                                 
@@ -201,10 +399,18 @@
                         .art{
 
                             margin-bottom: 1.5rem;
+                            @include sm {
+                                margin-bottom: 2rem;
+    
+                            }
+                            @include md {
+                                margin-bottom: 2rem;
+                            }
     
                             h4 {
                                 margin-left: -5%;
                                 font-weight: lighter;
+
                             }
                             
                             .list {
@@ -224,6 +430,20 @@
                                     height: 3rem;
                                     text-align: center;
                                     border-radius: 30px;
+                                    @include sm {
+                                        margin-right: 1rem;
+                                        font-size: 0.5rem;
+                                        width: 5rem;
+                                        height: 2rem;
+                                        padding: 0.4rem;
+                                    }
+                                    @include md {
+                                        margin-right: 1rem;
+                                        font-size: 0.5rem;
+                                        width: 5rem;
+                                        height: 2rem;
+                                        padding: 0.4rem;
+                                    }
                                 }
                                 
                             }
@@ -242,6 +462,14 @@
                 @include flex($align: flex-start);
                 width: 100%;
                 height: 40vh;
+                @include sm {
+                    flex-direction: column;
+                    margin-top: 10rem;
+                }
+                @include md {
+                    flex-direction: column;
+                    margin-top: 10rem;
+                }
                 
                 &-left {
                     width: 50%;
@@ -252,15 +480,38 @@
                         margin-left: 10%;
                         border-bottom: 3px solid $secondary-color;
                         width: 70%; 
+                        @include sm {
+                            font-size: 0.9rem;
+                            margin-bottom: 1rem;
+                        }
+                        @include md {
+                            font-size: 0.9rem;
+                            margin-bottom: 1rem;
+                        }
                     }
 
                     .soft-skills {
                         margin: 2rem 0 0 8rem;
+                        @include sm {
+                            margin: 0;
+                            margin-left: 2rem;
+
+                        }
+                        @include md {
+                            margin: 0;
+                            margin-left: 2rem;
+                        }
 
                         li {
                             margin: 10px;
                             font-weight: lighter;
                             font-size: 0.85rem;
+                            @include sm {
+                                margin-bottom: 1rem;
+                            }
+                            @include md {
+                                margin-bottom: 1rem;
+                            }
                         }
                     }
 
@@ -269,6 +520,7 @@
         
                 &-right {
                     width: 50%;
+                    
     
                     h3 {
                         font-weight: lighter;
@@ -276,15 +528,38 @@
                         margin-left: 10%;
                         border-bottom: 3px solid $secondary-color;
                         width: 70%;
+                        @include sm {
+                            font-size: 0.9rem;
+                            margin-bottom: 1rem;
+                        }
+                        @include md {
+                            font-size: 0.9rem;
+                            margin-bottom: 1rem;
+                        }
                     }
 
                     .languages {
                         margin: 2rem 0 0 8rem;
+                        @include sm {
+                            margin: 0;
+                            margin-left: 2rem;
+
+                        }
+                        @include md {
+                            margin: 0;
+                            margin-left: 2rem;
+                        }
 
                         li {
                             margin: 10px;
                             font-weight: lighter;
                             font-size: 0.85rem;
+                            @include sm {
+                                margin-bottom: 1rem;
+                            }
+                            @include md {
+                                margin-bottom: 1rem;
+                            }
                         }
                     }
                 }

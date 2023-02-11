@@ -5,7 +5,18 @@
     .contact {
         width: 100%;
         height: 40vh;
-        @include flex($justify: space-around);
+        @include flex;
+        
+        @include sm  {
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+        }
+        @include md  {
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+        }
 
         &-copyright {
             width: 50%;
@@ -42,27 +53,76 @@
             p {
                 margin-top: 10%;
                 font-size: 15px;
+
             }
         }
 
         &-me {
+
+            @include sm {
+                width: 30%;
+                height: 20vh;
+                display: flex;
+                flex-direction: column;
+            }
+            @include md {
+                width: 20%;
+                height: 20vh;
+                display: flex;
+                flex-direction: row;
+            }
             width: 50%;
             height: 40vh;
-           display: flex;
-           justify-content: center;
-           align-items: flex-start;
-           margin-top: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            
+            margin-top: 5rem;
             h2 {
                 margin-right: 2rem;
                 color: $text-color;
                 font-weight: lighter;
+                @include sm {
+                    font-size: 1rem;
+                    margin-top: -4rem;
+                }
+                @include md {
+                    font-size: 1rem;
+                    margin-top: -4rem;
+
+                }
+            }
+            p{
+                display: none;
+                @include sm {
+                    display: contents;
+                    display: flex;
+                    margin-top: -4rem;
+                    color: $text-color;
+                    font-size: 0.5rem;
+                    font-weight: lighter;
+                }
+                @include md {
+                    display: contents;
+                    display: flex;
+                    margin-top: -4rem;
+                    color: $text-color;
+                    font-size: 0.5rem;
+                    font-weight: lighter;
+                }
             }
 
             &-input {
                 @include flex($direction: column, $align: flex-start);
+                @include sm {
+                    display: none;
+                }
+                @include md {
+                    display: none;
+                }
 
                 .email {
-                    
+                    display: flex;
 
                     input {
                         width: 15rem;
@@ -79,7 +139,9 @@
                 }
 
                 .text {
-                    input {
+
+                    display: flex;
+                    textarea {
                         width: 15rem;
                         height: 10rem;
                         border: 1px solid $text-color;
@@ -90,6 +152,7 @@
                     label {
                         color: $text-color;
                         margin-right: 0.5rem;
+                        
                     }
                 }
 

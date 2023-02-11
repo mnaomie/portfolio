@@ -2,6 +2,12 @@
     width: 100%;
     height: 100vh;
     background-color: $primary-dark-color;
+    @include sm {
+        height: 150vh;
+    }
+    @include md {
+        height: 150vh;
+    }
 
     .portfolio-page {
         
@@ -17,17 +23,37 @@
                 border: 2px solid $text-color;
                 width: 32%;
                 font-weight: lighter;
+                @include sm {
+                    font-size: 1rem;
+                    margin-top: -1rem;
+                }
+                @include md {
+                    font-size: 1rem;
+                    margin-top: -1rem;
+                }
             }
         }
 
         &-caroussel {
             @include flex($justify: space-around);
             margin-top: 5rem;
+            @include sm {
+                flex-direction: column;
+            }
+            @include md {
+                flex-direction: column;
+            }
 
             i {
                 font-size: 4rem;
                 color: $text-color;
                 cursor: pointer;
+                @include sm {
+                    display: none;
+                }
+                @include md {
+                    display: none;
+                }
 
                 &:hover {
                     color: $secondary-color;
@@ -48,6 +74,16 @@
                 width: 30%;
                 height: 50vh;
                 border-radius: 10px;
+                @include sm {
+                    width: 80%;
+                    height: 50vh;
+                    margin-bottom: 2.5rem;
+                }
+                @include md {
+                    width: 60%;
+                    height: 50vh;
+                    margin-bottom: 2.5rem;
+                }
 
             }
 
@@ -56,12 +92,26 @@
                 width: 30%;
                 height: 50vh;
                 border-radius: 10px;
+                @include sm {
+                    width: 80%;
+                    height: 50vh;
+                }
+                @include md {
+                    width: 60%;
+                    height: 50vh;
+                }
                 
             }
         }
 
         &-desc {
             @include flex($justify: space-around);
+            @include sm {
+                display: none;
+            }
+            @include md {
+                display: none;
+            }
 
             h3 {
                 color: $text-color;
